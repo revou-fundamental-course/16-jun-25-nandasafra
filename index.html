@@ -3,9 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Matematik</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+    <title>Kalkulator Bangun Datar</title>
 </head>
 <body>
-    
+    <header>
+        <h1>Kalkulator Luas & Keliling</h1>
+    </header>
+
+    <main>
+        <div class="row" style="flex-direction: column; align-items: center; text-align: center;">
+            <h2>Pilih Perhitungan</h2>
+            <img src="" alt="">
+            <select id="mode" onchange="ubahForm()">
+                <option value="luasSegitiga">Luas Segitiga</option>
+                <option value="kelilingSegitiga">Keliling Segitiga</option>
+                <option value="luasPersegi">Luas Persegi</option>
+                <option value="kelilingPersegi">Keliling Persegi</option>
+            </select>
+        </div>
+
+        <div class="row">
+            <div class="column" id="luasSegitiga">
+                <h3>Luas Segitiga</h3>
+                <h4>Rumus: ½ &times Alas &times Tinggi</h4>
+                <form>
+                    <label for="alas">Alas (a):</label>
+                    <input type="number" id="alas">
+
+                    <label for="tinggi">Tinggi (t):</label>
+                    <input type="number" id="tinggi">
+
+                    <button type="button" onclick="hitungLuasSegitiga()">Hitung</button>
+                    <input type="reset" value="Reset" onclick="resetOutput('hasilLuasSegitiga')">
+
+                    <p id="hasilLuasSegitiga"></p>
+                </form>
+            </div>
+
+            <div class="column" id="kelilingSegitiga">
+                <h3>Keliling Segitiga</h3>
+                <h4>Rumus: a + b + c</h4>
+                <form>
+                    <label for="sisiA">Sisi A:</label>
+                    <input type="number" id="sisiA">
+                    
+                    <label for="sisiB">Sisi B:</label>
+                    <input type="number" id="sisiB">
+
+                    <label for="sisiC">Sisi C:</label>
+                    <input type="number" id="sisiC">
+
+                    <button type="button" onclick="hitungKelilingSegitiga()">Hitung</button>
+                    <input type="Reset" value="reset" onclick="resetOutput('hasilKelilingSegitiga')">
+
+                    <p id="hasilKelilingSegitiga"></p>
+                </form>
+            </div>
+
+            <div class="column" id="luasPersegi">
+                <h3>Luas Persegi</h3>
+                <h4>Rumus: sisi &times sisi</h4>
+                <form>
+                    <label for="sisiLuas">Sisi: </label>
+                    <input type="number" id="sisiLuas">
+
+                    <button type="button" onclick="hitungLuasPersegi()">Hitung</button>
+                    <input type="reset" value="Reset" onclick="resetOutput('hasilLuasPersegi')">
+
+                    <p id="hasilLuasPersegi"></p>
+                </form>
+            </div>
+
+            <div class="column" id="kelilingPersegi">
+                <h3>Keliling Persegi</h3>
+                <h4>Rumus: 4 &times sisi</h4>
+                <form>
+                    <label for="sisiKeliling">Sisi:</label>
+                    <input type="number" id="sisiKeliling">
+
+                    <button type="button" onclick="hitungKelilingPersegi()">Hitung</button>
+                    <input type="reset" value="Reset" onclick="resetOutput('hasilKelilingPersegi')">
+
+                    <p id="hasilKelilingPersegi"></p>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2025 Kalkulator Bangun Datar
+    </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
