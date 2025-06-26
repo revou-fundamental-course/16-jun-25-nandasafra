@@ -18,7 +18,7 @@ function hitungKelilingSegitiga() {
   const b = parseFloat(document.getElementById("sisiB").value);
   const c = parseFloat(document.getElementById("sisiC").value);
   const result = a + b + c;
-  document.getElementById("hasilKelilingSegitiga").innerText = "Keliling: " + result + " cm";
+  document.getElementById("hasilKelilingSegitiga").innerText = "Keliling: " + result + " cm²";
 }
 
 function hitungLuasPersegi() {
@@ -30,7 +30,7 @@ function hitungLuasPersegi() {
 function hitungKelilingPersegi() {
   const s = parseFloat(document.getElementById("sisiKeliling").value);
   const result = 4 * s;
-  document.getElementById("hasilKelilingPersegi").innerText = "Keliling: " + result +" cm";
+  document.getElementById("hasilKelilingPersegi").innerText = "Keliling: " + result +" cm²";
 }
 
 function resetOutput(id) {
